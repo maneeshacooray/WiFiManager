@@ -39,8 +39,13 @@ const char HTTP_SCRIPT[]           PROGMEM = "<script>function c(l){"
 
 const char HTTP_HEAD_END[]         PROGMEM = "</head><body class='{c}'><div class='wrap'>"; // {c} = _bodyclass
 // example of embedded logo, base64 encoded inline, No styling here
-// const char HTTP_ROOT_MAIN[]        PROGMEM = "<img title=' alt=' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADQElEQVRoQ+2YjW0VQQyE7Q6gAkgFkAogFUAqgFQAVACpAKiAUAFQAaECQgWECggVGH1PPrRvn3dv9/YkFOksoUhhfzwz9ngvKrc89JbnLxuA/63gpsCmwCADWwkNEji8fVNgotDM7osI/x777x5l9F6JyB8R4eeVql4P0y8yNsjM7KGIPBORp558T04A+CwiH1UVUItiUQmZ2XMReSEiAFgjAPBeVS96D+sCYGaUx4cFbLfmhSpnqnrZuqEJgJnd8cQplVLciAgX//Cf0ToIeOB9wpmloLQAwpnVmAXgdf6pwjpJIz+XNoeZQQZlODV9vhc1Tuf6owrAk/8qIhFbJH7eI3eEzsvydQEICqBEkZwiALfF70HyHPpqScPV5HFjeFu476SkRA0AzOfy4hYwstj2ZkDgaphE7m6XqnoS7Q0BOPs/sw0kDROzjdXcCMFCNwzIy0EcRcOvBACfh4k0wgOmBX4xjfmk4DKTS31hgNWIKBCI8gdzogTgjYjQWFMw+o9LzJoZ63GUmjWm2wGDc7EvDDOj/1IVMIyD9SUAL0WEhpriRlXv5je5S+U1i2N88zdPuoVkeB+ls4SyxCoP3kVm9jsjpEsBLoOBNC5U9SwpGdakFkviuFP1keblATkTENTYcxkzgxTKOI3jyDxqLkQT87pMA++H3XvJBYtsNbBN6vuXq5S737WqHkW1VgMQNXJ0RshMqbbT33sJ5kpHWymzcJjNTeJIymJZtSQd9NHQHS1vodoFoTMkfbJzpRnLzB2vi6BZAJxWaCr+62BC+jzAxVJb3dmmiLzLwZhZNPE5e880Suo2AZgB8e8idxherqUPnT3brBDTlPxO3Z66rVwIwySXugdNd+5ejhqp/+NmgIwGX3Py3QBmlEi54KlwmjkOytQ+iJrLJj23S4GkOeecg8G091no737qvRRdzE+HLALQoMTBbJgBsCj5RSWUlUVJiZ4SOljb05eLFWgoJ5oY6yTyJp62D39jDANoKKcSocPJD5dQYzlFAFZJflUArgTPZKZwLXAnHmerfJquUkKZEgyzqOb5TuDt1P3nwxobqwPocZA11m4A1mBx5IxNgRH21ti7KbAGiyNn3HoF/gJ0w05A8xclpwAAAABJRU5ErkJggg==' /><h1>{v}</h1><h3>WiFiManager</h3>";
-const char HTTP_ROOT_MAIN[]        PROGMEM = "<h1>{t}</h1><h3>{v}</h3>";
+// const char HTTP_ROOT_MAIN[]        PROGMEM = "<img title=' alt=' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADQElEQVRoQ+2YjW0VQQyE7Q6gAkgFkAogFUAqgFQAVACpAKiAUAFQAaECQgWECggVGH1PPrRvn3dv9/YkFOksoUhhfzwz9ngvKrc89JbnLxuA/63gpsCmwCADWwkNEji8fVNgotDM7osI/x777x5l9F6JyB8R4eeVql4P0y8yNsjM7KGIPBORp558T04A+CwiH1UVUItiUQmZ2XMReSEiAFgjAPBeVS96D+sCYGaUx4cFbLfmhSpnqnrZuqEJgJnd8cQplVLciAgX//Cf0ToIeOB9wpmloLQAwpnVmAXgdf6pwjpJIz+XNoeZQQZlODV9vhc1Tuf6owrAk/8qIhFbJH7eI3eEzsvydQEICqBEkZwiALfF70HyHPpqScPV5HFjeFu476SkRA0AzOfy4hYwstj2ZkDgaphE7m6XqnoS7Q0BOPs/sw0kDROzjdXcCMFCNwzIy0EcRcOvBACfh4k0wgOmBX4xjfmk4DKTS31hgNWIKBCI8gdzogTgjYjQWFMw+o9LzJoZ63GUmjWm2wGDc7EvDDOj/1IVMIyD9SUAL0WEhpriRlXv5je5S+U1i2N88zdPuoVkeB+ls4SyxCoP3kVm9jsjpEsBLoOBNC5U9SwpGdakFkviuFP1keblATkTENTYcxkzgxTKOI3jyDxqLkQT87pMA++H3XvJBYtsNbBN6vuXq5S737WqHkW1VgMQNXJ0RshMqbbT33sJ5kpHWymzcJjNTeJIymJZtSQd9NHQHS1vodoFoTMkfbJzpRnLzB2vi6BZAJxWaCr+62BC+jzAxVJb3dmmiLzLwZhZNPE5e880Suo2AZgB8e8idxherqUPnT3brBDTlPxO3Z66rVwIwySXugdNd+5ejhqp/+NmgIwGX3Py3QBmlEi54KlwmjkOytQ+iJrLJj23S4GkOeecg8G091no737qvRRdzE+HLALQoMTBbJgBsCj5RSWUlUVJiZ4SOljb05eLFWgoJ5oY6yTyJp62D39jDANoKKcSocPJD5dQYzlFAFZJflUArgTPZKZwLXAnHmerfJquUkKZEgyzqOb5TuDt1P3nwxobqwPocZA11m4A1mBx5IxNgRH21ti7KbAGiyNn3HoF/gJ0w05A8xclpwAAAABJRU5ErkJggg==' /><h1>{v}</h1><h3>Renewaa WiFi Portal</h3>";
+const char HTTP_ROOT_MAIN[]        PROGMEM =
+"<div style='text-align:center;'>"
+    "<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADQElEQVRoQ+2YjW0VQQyE7Q6gAkgFkAogFUAqgFQAVACpAKiAUAFQAaECQgWECggVGH1PPrRvn3dv9/YkFOksoUhhfzwz9ngvKrc89JbnLxuA/63gpsCmwCADWwkNEji8fVNgotDM7osI/x777x5l9F6JyB8R4eeVql4P0y8yNsjM7KGIPBORp558T04A+CwiH1UVUItiUQmZ2XMReSEiAFgjAPBeVS96D+sCYGaUx4cFbLfmhSpnqnrZuqEJgJnd8cQplVLciAgX//Cf0ToIeOB9wpmloLQAwpnVmAXgdf6pwjpJIz+XNoeZQQZlODV9vhc1Tuf6owrAk/8qIhFbJH7eI3eEzsvydQEICqBEkZwiALfF70HyHPpqScPV5HFjeFu476SkRA0AzOfy4hYwstj2ZkDgaphE7m6XqnoS7Q0BOPs/sw0kDROzjdXcCMFCNwzIy0EcRcOvBACfh4k0wgOmBX4xjfmk4DKTS31hgNWIKBCI8gdzogTgjYjQWFMw+o9LzJoZ63GUmjWm2wGDc7EvDDOj/1IVMIyD9SUAL0WEhpriRlXv5je5S+U1i2N88zdPuoVkeB+ls4SyxCoP3kVm9jsjpEsBLoOBNC5U9SwpGdakFkviuFP1keblATkTENTYcxkzgxTKOI3jyDxqLkQT87pMA++H3XvJBYtsNbBN6vuXq5S737WqHkW1VgMQNXJ0RshMqbbT33sJ5kpHWymzcJjNTeJIymJZtSQd9NHQHS1vodoFoTMkfbJzpRnLzB2vi6BZAJxWaCr+62BC+jzAxVJb3dmmiLzLwZhZNPE5e880Suo2AZgB8e8idxherqUPnT3brBDTlPxO3Z66rVwIwySXugdNd+5ejhqp/+NmgIwGX3Py3QBmlEi54KlwmjkOytQ+iJrLJj23S4GkOeecg8G091no737qvRRdzE+HLALQoMTBbJgBsCj5RSWUlUVJiZ4SOljb05eLFWgoJ5oY6yTyJp62D39jDANoKKcSocPJD5dQYzlFAFZJflUArgTPZKZwLXAnHmerfJquUkKZEgyzqOb5TuDt1P3nwxobqwPocZA11m4A1mBx5IxNgRH21ti7KbAGiyNn3HoF/gJ0w05A8xclpwAAAABJRU5ErkJggg==' alt='Logo' style='width:100px; height:auto;'>"
+    "<h1 style='color:blue; font-size:36px;'>{t}</h1>"
+    "<h3>{v}</h3>"
+"</div>";
 
 const char * const HTTP_PORTAL_MENU[] PROGMEM = {
 "<form action='/wifi'    method='get'><button>Configure WiFi</button></form><br/>\n", // MENU_WIFI
@@ -88,63 +93,95 @@ const char HTTP_STATUS_NONE[]      PROGMEM = "<div class='msg'>No AP set</div>";
 const char HTTP_BR[]               PROGMEM = "<br/>";
 
 const char HTTP_STYLE[]            PROGMEM = "<style>"
-".c,body{text-align:center;font-family:verdana}div,input,select{padding:5px;font-size:1em;margin:5px 0;box-sizing:border-box}"
-"input,button,select,.msg{border-radius:.3rem;width: 100%}input[type=radio],input[type=checkbox]{width:auto}"
-"button,input[type='button'],input[type='submit']{cursor:pointer;border:0;background-color:#1fa3ec;color:#fff;line-height:2.4rem;font-size:1.2rem;width:100%}"
-"input[type='file']{border:1px solid #1fa3ec}"
-".wrap {text-align:left;display:inline-block;min-width:260px;max-width:500px}"
-// links
-"a{color:#000;font-weight:700;text-decoration:none}a:hover{color:#1fa3ec;text-decoration:underline}"
+"body, .c {text-align: center; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f9; color: #333; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow-x: hidden;}"
+".wrap {text-align: left; display: inline-block; min-width: 260px; max-width: 600px; width: 90%; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow-y: auto; max-height: 100vh;}"
+"div, input, select {padding: 8px; font-size: 1em; margin: 10px 0; box-sizing: border-box; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out;}"
+"input, button, select, .msg {border-radius: .3rem; width: 100%;}"
+"input[type=radio], input[type=checkbox] {width: auto;}"
+"button, input[type='button'], input[type='submit'] {cursor: pointer; border: none; background-color: #007bff; color: #fff; line-height: 2.4rem; font-size: 1.1rem; width: 100%; border-radius: 8px; transition: background-color 0.3s ease, transform 0.3s;}"
+"button:hover, input[type='button']:hover, input[type='submit']:hover {background-color: #0056b3; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}"
+"input[type='file'] {border: 2px solid #007bff;}"
+"a {color: #007bff; font-weight: 600; text-decoration: none; transition: color 0.3s;}"
+"a:hover {color: #0056b3; text-decoration: underline;}"
+
 // quality icons
-".q{height:16px;margin:0;padding:0 5px;text-align:right;min-width:38px;float:right}.q.q-0:after{background-position-x:0}.q.q-1:after{background-position-x:-16px}.q.q-2:after{background-position-x:-32px}.q.q-3:after{background-position-x:-48px}.q.q-4:after{background-position-x:-64px}.q.l:before{background-position-x:-80px;padding-right:5px}.ql .q{float:left}.q:after,.q:before{content:'';width:16px;height:16px;display:inline-block;background-repeat:no-repeat;background-position: 16px 0;"
-"background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAQCAMAAADeZIrLAAAAJFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADHJj5lAAAAC3RSTlMAIjN3iJmqu8zd7vF8pzcAAABsSURBVHja7Y1BCsAwCASNSVo3/v+/BUEiXnIoXkoX5jAQMxTHzK9cVSnvDxwD8bFx8PhZ9q8FmghXBhqA1faxk92PsxvRc2CCCFdhQCbRkLoAQ3q/wWUBqG35ZxtVzW4Ed6LngPyBU2CobdIDQ5oPWI5nCUwAAAAASUVORK5CYII=');}"
-// icons @2x media query (32px rescaled)
-"@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi){.q:before,.q:after {"
-"background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAgCAMAAACfM+KhAAAALVBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAOrOgAAAADnRSTlMAESIzRGZ3iJmqu8zd7gKjCLQAAACmSURBVHgB7dDBCoMwEEXRmKlVY3L//3NLhyzqIqSUggy8uxnhCR5Mo8xLt+14aZ7wwgsvvPA/ofv9+44334UXXngvb6XsFhO/VoC2RsSv9J7x8BnYLW+AjT56ud/uePMdb7IP8Bsc/e7h8Cfk912ghsNXWPpDC4hvN+D1560A1QPORyh84VKLjjdvfPFm++i9EWq0348XXnjhhT+4dIbCW+WjZim9AKk4UZMnnCEuAAAAAElFTkSuQmCC');"
+".q {height: 18px; margin: 0; padding: 0 6px; text-align: right; min-width: 40px; float: right;}"
+".q.q-0:after {background-position-x: 0;}"
+".q.q-1:after {background-position-x: -16px;}"
+".q.q-2:after {background-position-x: -32px;}"
+".q.q-3:after {background-position-x: -48px;}"
+".q.q-4:after {background-position-x: -64px;}"
+".q.l:before {background-position-x: -80px; padding-right: 5px;}"
+".ql .q {float: left;}"
+".q:after, .q:before {content: ''; width: 16px; height: 16px; display: inline-block; background-repeat: no-repeat; background-position: 16px 0;"
+"background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAQCAMAAADeZIrLAAAAJFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADHJj5lAAAAC3RSTlMAIjN3iJmqu8zd7vF8pzcAAABsSURBVHja7Y1BCsAwCASNSVo3/v+/BUEiXnIoXkoX5jAQMxTHzK9cVSnvDxwD8bFx8PhZ9q8FmghXBhqA1faxk92PsxvRc2CCCFdhQCbRkLoAQ3q/wWUBqG35ZxtVzW4Ed6LngPyBU2CobdIDQ5oPWI5nCUwAAAAASUVORK5CYII=');}"
+"@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {"
+".q:before, .q:after {"
+"background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAgCAMAAACfM+KhAAAALVBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAOrOgAAAADnRSTlMAESIzRGZ3iJmqu8zd7gKjCLQAAACmSURBVHgB7dDBCoMwEEXRmKlVY3L//3NLhyzqIqSUggy8uxnhCR5Mo8xLt+14aZ7wwgsvvPA/ofv9+44334UXXngvb6XsFhO/VoC2RsSv9J7x8BnYLW+AjT56ud/uePMdb7IP8Bsc/e7h8Cfk912ghsNXWPpDC4hvN+D1560A1QPORyh84VKLjjdvfPFm++i9EWq0348XXnjhhT+4dIbCW+WjZim9AKk4UZMnnCEuAAAAAElFTkSuQmCC');"
 "background-size: 95px 16px;}}"
+
 // msg callouts
-".msg{padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-left-color:#777}.msg h4{margin-top:0;margin-bottom:5px}.msg.P{border-left-color:#1fa3ec}.msg.P h4{color:#1fa3ec}.msg.D{border-left-color:#dc3630}.msg.D h4{color:#dc3630}.msg.S{border-left-color: #5cb85c}.msg.S h4{color: #5cb85c}"
+".msg {padding: 20px; margin: 20px 0; border-radius: 8px; background-color: #f1f1f1; border-left: 5px solid #ccc; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}"
+".msg h4 {margin-top: 0; margin-bottom: 8px;}"
+".msg.P {border-left-color: #007bff;}"
+".msg.P h4 {color: #007bff;}"
+".msg.D {border-left-color: #e74c3c;}"
+".msg.D h4 {color: #e74c3c;}"
+".msg.S {border-left-color: #2ecc71;}"
+".msg.S h4 {color: #2ecc71;}"
+
 // lists
-"dt{font-weight:bold}dd{margin:0;padding:0 0 0.5em 0;min-height:12px}"
-"td{vertical-align: top;}"
-".h{display:none}"
-"button{transition: 0s opacity;transition-delay: 3s;transition-duration: 0s;cursor: pointer}"
-"button.D{background-color:#dc3630}"
-"button:active{opacity:50% !important;cursor:wait;transition-delay: 0s}"
-// invert
-"body.invert,body.invert a,body.invert h1 {background-color:#060606;color:#fff;}"
-"body.invert .msg{color:#fff;background-color:#282828;border-top:1px solid #555;border-right:1px solid #555;border-bottom:1px solid #555;}"
-"body.invert .q[role=img]{-webkit-filter:invert(1);filter:invert(1);}"
-":disabled {opacity: 0.5;}"
+"dt {font-weight: 600;}"
+"dd {margin: 0; padding: 0 0 0.5em 0; min-height: 14px;}"
+"td {vertical-align: top;}"
+
+// button transitions and states
+"button {transition: background-color 0.3s, opacity 0.3s ease;}"
+"button.D {background-color: #e74c3c;}"
+"button:active {opacity: 0.7; transform: translateY(2px);}"
+
+// Media queries for responsive design
+"@media (max-width: 768px) {"
+".wrap {width: 95%; padding: 15px;}"
+"button, input[type='button'], input[type='submit'] {font-size: 1rem; line-height: 2rem;}"
+".msg {padding: 15px; margin: 15px 0;}"
+"}"
+
+"@media (max-width: 480px) {"
+".wrap {width: 100%; padding: 10px; border-radius: 5px;}"
+"button, input[type='button'], input[type='submit'] {font-size: 0.9rem; line-height: 1.8rem;}"
+".msg {padding: 10px; margin: 10px 0;}"
+"}"
 "</style>";
 
 #ifndef WM_NOHELP
 const char HTTP_HELP[]             PROGMEM =
  "<br/><h3>Available pages</h3><hr>"
- "<table class='table'>"
- "<thead><tr><th>Page</th><th>Function</th></tr></thead><tbody>"
- "<tr><td><a href='/'>/</a></td>"
- "<td>Menu page.</td></tr>"
- "<tr><td><a href='/wifi'>/wifi</a></td>"
- "<td>Show WiFi scan results and enter WiFi configuration.(/0wifi noscan)</td></tr>"
- "<tr><td><a href='/wifisave'>/wifisave</a></td>"
- "<td>Save WiFi configuration information and configure device. Needs variables supplied.</td></tr>"
- "<tr><td><a href='/param'>/param</a></td>"
- "<td>Parameter page</td></tr>"
- "<tr><td><a href='/info'>/info</a></td>"
- "<td>Information page</td></tr>"
- "<tr><td><a href='/u'>/u</a></td>"
- "<td>OTA Update</td></tr>"
- "<tr><td><a href='/close'>/close</a></td>"
- "<td>Close the captiveportal popup, config portal will remain active</td></tr>"
- "<tr><td>/exit</td>"
- "<td>Exit Config portal, config portal will close</td></tr>"
- "<tr><td>/restart</td>"
- "<td>Reboot the device</td></tr>"
- "<tr><td>/erase</td>"
- "<td>Erase WiFi configuration and reboot device. Device will not reconnect to a network until new WiFi configuration data is entered.</td></tr>"
- "</table>"
- "<p/>Github <a href='https://github.com/tzapu/WiFiManager'>https://github.com/tzapu/WiFiManager</a>.";
+ "<table class='table' style='width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);'>"
+ "<thead style='background-color: #007bff; color: white;'><tr><th style='padding: 12px; text-align: left; border-bottom: 2px solid #ddd;'>Page</th><th style='padding: 12px; text-align: left; border-bottom: 2px solid #ddd;'>Function</th></tr></thead>"
+ "<tbody>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/' style='color: #007bff; text-decoration: none;'>/</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Menu page.</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/wifi' style='color: #007bff; text-decoration: none;'>/wifi</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Show WiFi scan results and enter WiFi configuration.(/0wifi noscan)</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/wifisave' style='color: #007bff; text-decoration: none;'>/wifisave</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Save WiFi configuration information and configure device. Needs variables supplied.</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/param' style='color: #007bff; text-decoration: none;'>/param</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Parameter page</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/info' style='color: #007bff; text-decoration: none;'>/info</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Information page</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/u' style='color: #007bff; text-decoration: none;'>/u</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>OTA Update</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'><a href='/close' style='color: #007bff; text-decoration: none;'>/close</a></td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Close the captiveportal popup, config portal will remain active</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'>/exit</td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Exit Config portal, config portal will close</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'>/restart</td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Reboot the device</td></tr>"
+ "<tr><td style='padding: 10px; border-bottom: 1px solid #ddd;'>/erase</td>"
+ "<td style='padding: 10px; border-bottom: 1px solid #ddd;'>Erase WiFi configuration and reboot device. Device will not reconnect to a network until new WiFi configuration data is entered.</td></tr>"
+ "</tbody></table>";
+//  "<p/>Github <a href='https://github.com/tzapu/WiFiManager'>https://github.com/tzapu/WiFiManager</a>.";
 #else
 const char HTTP_HELP[]             PROGMEM = "";
 #endif
@@ -220,7 +257,7 @@ const char HTTP_INFO_aboutarduino[] PROGMEM = "<dt>Arduino</dt><dd>{1}</dd>";
 const char HTTP_INFO_aboutsdk[]     PROGMEM = "<dt>ESP-SDK/IDF</dt><dd>{1}</dd>";
 const char HTTP_INFO_aboutdate[]    PROGMEM = "<dt>Build date</dt><dd>{1}</dd>";
 
-const char S_brand[]              PROGMEM = "WiFiManager";
+const char S_brand[]              PROGMEM = "Renewaa";
 const char S_debugPrefix[]        PROGMEM = "*wm:";
 const char S_y[]                  PROGMEM = "Yes";
 const char S_n[]                  PROGMEM = "No";
@@ -232,7 +269,7 @@ const char S_NA[]                 PROGMEM = "Unknown";
 const char S_passph[]             PROGMEM = "********";
 const char S_titlewifisaved[]     PROGMEM = "Credentials saved";
 const char S_titlewifisettings[]  PROGMEM = "Settings saved";
-const char S_titlewifi[]          PROGMEM = "Config ESP";
+const char S_titlewifi[]          PROGMEM = "Renewaa Device Portal";
 const char S_titleinfo[]          PROGMEM = "Info";
 const char S_titleparam[]         PROGMEM = "Setup";
 const char S_titleparamsaved[]    PROGMEM = "Setup saved";
